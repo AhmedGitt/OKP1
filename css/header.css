@@ -76,7 +76,7 @@ header #text-1 {
     animation: fadeInScaleAnimation ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 header #text-2 {
@@ -86,7 +86,7 @@ header #text-2 {
     animation: fadeInScaleAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 header #text-3 {
@@ -96,6 +96,7 @@ header #text-3 {
     animation: fadeInScaleAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    font-weight: 600;
 }
 
 @keyframes fadeInAnimation {
