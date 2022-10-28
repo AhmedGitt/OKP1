@@ -1,9 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 :root {
     --color-white: #FFFFFF;
     --color-black: #222222;
-    --color-accent-1: ##a17864;
-    --color-accent-1: ##624645;
-    --color-accent-1: ##381e1d;
+    --color-accent-1: #a17864;
+    --color-accent-1: #624645;
+    --color-accent-1: #381e1d;
+}
+
+* {
+    font-family: 'Merriweather Sans', 'Varela Round' !important;
+    box-sizing: border-box;
 }
