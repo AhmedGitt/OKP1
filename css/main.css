@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 
 :root {
     --color-white: #FFFFFF;
@@ -6,4 +6,46 @@
     --color-accent-1: ##a17864;
     --color-accent-1: ##624645;
     --color-accent-1: ##381e1d;
+}
+
+* {
+    font-family: 'M PLUS Rounded 1c'!important;
+    box-sizing: border-box;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    background-image: url("https://saunologia.fi/wp-content/uploads/2017/10/171013-kaurila-sauna-yleiskuva-lauteilta-1600x1000.jpg");
+    background-size: cover;
+    color: var(--color-white);
+    position: relative;
+}
+
+header::after {
+    position: absolute;
+    z-index: 1;
+    content: " ";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('http://placehold.it/350x150');
+    color: white;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header .button-row {
+    display: flex;
+    gap: 2rem;
+}
+
+.button-row button {
+    width: 10rem;
 }
