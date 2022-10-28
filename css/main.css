@@ -3,13 +3,13 @@
 :root {
     --color-white: #FFFFFF;
     --color-black: #222222;
-    --color-accent-1: ##a17864;
-    --color-accent-1: ##624645;
-    --color-accent-1: ##381e1d;
+    --color-accent-1: #a17864;
+    --color-accent-1: #624645;
+    --color-accent-1: #381e1d;
 }
 
 * {
-    font-family: 'M PLUS Rounded 1c'!important;
+    /* font-family: 'M PLUS Rounded 1c' !important; */
     box-sizing: border-box;
 }
 
@@ -18,8 +18,13 @@ header {
     display: flex;
     background-image: url("https://saunologia.fi/wp-content/uploads/2017/10/171013-kaurila-sauna-yleiskuva-lauteilta-1600x1000.jpg");
     background-size: cover;
+    background-position: center;
     color: var(--color-white);
     position: relative;
+    animation: fadeInBgScaleAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    overflow: hidden;
 }
 
 header::after {
@@ -30,22 +35,98 @@ header::after {
     height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('http://placehold.it/350x150');
     color: white;
+    animation: fadeInBgAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 header .container {
-    display: flex;
-    flex-direction: column;
     z-index: 2;
     justify-content: center;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15rem;
+}
 
+header .heading-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 header .button-row {
     display: flex;
     gap: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
 }
 
-.button-row button {
-    width: 10rem;
+/* Desktop button-row */
+@media (min-width: 768px) {
+    header .button-row {
+        flex-direction: row;
+    }
+}
+
+
+header .button-row button {
+    font-size: 1.25rem;
+}
+
+header .text-box {
+    font-weight: 300;
+}
+
+header #text-1 {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    font-weight: 200;
+}
+
+header #text-2 {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    font-weight: bold;
+}
+
+header #text-3 {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInBgAnimation {
+    0% {
+        background-color: rgba(0, 0, 0, 1);
+    }
+
+    100% {
+        background-color: rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes fadeInBgScaleAnimation {
+    0% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
