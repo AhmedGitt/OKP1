@@ -1,0 +1,32 @@
+body {
+    height: 100vh;
+    font-size: 62.5%;
+    font-family: 'Merriweather Sans', 'Varela Round'
+}
+
+.citytitle {
+    font-size: 3.5rem;
+    font-weight: 500;
+    justify-self: center;
+}
+
+.varausbtn {
+    padding: 1rem;
+    font-size: 3.5rem;
+    border: 2px dotted #624638;
+    background-color: whitesmoke;
+    color: #381e1d;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 40%;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(rgba(56, 66, 96, 0.56), #aaaaaa80);
+
+}
