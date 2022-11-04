@@ -4,6 +4,10 @@ body {
     font-family: 'Merriweather Sans', 'Varela Round'
 }
 
+.carousel-item {
+    border: #222222 solid 1rem;
+}
+
 .citytitle {
     font-size: 3.5rem;
     font-weight: 500;
