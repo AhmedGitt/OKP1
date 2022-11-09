@@ -1,72 +1,47 @@
-<link rel="stylesheet" href="/Palaute/style.css">
-<button type="button" class="btn btn-info btn-lg openmodal" data-toggle="modal" data-target="#myModal">Open
-    Modal</button>
-  
-  <!--Division for Modal-->
-  <div id="myModal" class="modal fade" role="dialog">
-  
-    <!--Modal-->
-    <div class="modal-dialog">
-  
-      <!--Modal Content-->
-      <div class="modal-content">
-  
-        <!-- Modal Header-->
-        <div class="modal-header">
-          <h3>Feedback Request</h3>
-  
-          <!--Close/Cross Button-->
-          <button type="button" class="close" data-dismiss="modal" style="color: white;">&times;</button>
-        </div>
-  
-        <!-- Modal Body-->
-        <div class="modal-body text-center">
-          <i class="far fa-file-alt fa-4x mb-3 animated rotateIn icon1"></i>
-          <h3>Your opinion matters</h3>
-          <h5>Help us improve our product? <strong>Give us your feedback.</strong></h5>
-          <hr>
-          <h6>Your Rating</h6>
-        </div>
-  
-        <!-- Radio Buttons for Rating-->
-        <div class="form-check mb-4">
-          <input name="feedback" type="radio">
-          <label class="ml-3">Very good</label>
-        </div>
-        <div class="form-check mb-4">
-          <input name="feedback" type="radio">
-          <label class="ml-3">Good</label>
-        </div>
-        <div class="form-check mb-4">
-          <input name="feedback" type="radio">
-          <label class="ml-3">Mediocre</label>
-        </div>
-        <div class="form-check mb-4">
-          <input name="feedback" type="radio">
-          <label class="ml-3">Bad</label>
-        </div>
-        <div class="form-check mb-4">
-          <input name="feedback" type="radio">
-          <label class="ml-3">Very Bad</label>
-        </div>
-  
-        <!--Text Message-->
-        <div class="text-center">
-          <h4>What could we improve?</h4>
-        </div>
-        <textarea type="textarea" placeholder="Your Message" rows="3"></textarea>
-  
-  
-        <!-- Modal Footer-->
-        <div class="modal-footer">
-          <a href="" class="btn btn-primary">Send
-            <i class="fa fa-paper-plane"></i>
-          </a>
-          <a href="" class="btn btn-outline-primary" data-dismiss="modal">Cancel</a>
-        </div>
-  
-      </div>
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/Palaute/css/style.css">
+  <title>Palaute</title>
+</head>
+<body>
+  <div class="container">
+    <p>Ota yhteyttä</p>
+    
+    <div class="login">
+      <input type="text" placeholder="Etunimi" class="input">
+      <input type="text" placeholder="Sukunimi" class="input">
     </div>
+    
+    <div class="subject">
+      <input type="text" placeholder="Sähköposti" class="input">
+    </div>
+    
+    <div class="msg">
+      <textarea  class="area" placeholder="Viesti"></textarea>
+    </div>
+    
+    <div id="btn" data-modal-target="#modal">Lähetä viesti</div>
+    <div class="modal" id="modal">
+      <div class="modal-header">
+        <div class="title">Viesti on lähetetty!</div>
+        <button data-close-button class="close-button">&times;</button>
+      </div>
+      <div class="modal-body">
+        Kiitos viestistäsi! Olemme vastaanottaneet viestisi ja pyrimme käsittelemään asian mahdollisimman pian.
+      </div>
+    </div>
+    <div id="overlay"></div>
   
   </div>
+
+
+  
+
+  
+  <script src="./js/skriptit.js"></script>
+</body>
+</html>
