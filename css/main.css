@@ -2,6 +2,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 :root {
+    --scroll-top: 0px;
+    --color-white: #ffffff;
     --color-white: #ffffff;
     --color-black: #222222;
     --color-accent-1: #a17864;
@@ -14,78 +16,373 @@
     box-sizing: border-box;
 }
 
-footer.nb-footer {
-    background: var(--color-black);
+/* Saunatyypit. Parallax  */
+
+.saunatyypit {
+    position: relative;
+    font-size: 4rem;
+    height: 100vh;
+    background-color: #000000;
 }
-footer.nb-footer .about {
-    margin: 0 auto;
-    margin-top: 40px;
-    max-width: 1170px;
+
+.layers {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    color: var(--color-black);
+}
+
+.layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
+    vertical-align: bottom;
+}
+
+.saunaheading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.saunatext1 {
+    font-size: 1.6rem;
+    color: whitesmoke;
+    float: left;
+    width: 35%;
+    margin-left: 3rem;
+    margin-top: 0rem;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.saunatext2 {
+    font-size: 1.6rem;
+    color: whitesmoke;
+    float: right;
+    width: 30%;
+    margin-right: 3rem;
+    margin-top: 7rem;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 30px;
+}
+
+.layers__header {
+    transform: translate3d(0, calc(var(--scrollTop) / 100), 0);
+    z-index: 0;
+}
+
+.layers__caption1 {
+    transform: translate3d(0, calc(var(--scrollTop) / 9), 0);
+    z-index: 1;
+}
+
+.layers__caption2 {
+    transform: translate3d(0, calc(var(--scrollTop) / 15), 0);
+    z-index: 2;
+}
+
+@media only screen and (max-width: 425px) {
+    .saunatyypit {
+        font-size: 1.8rem;
+    }
+    .saunaheading {
+        font-size: 1.3rem;
+    }
+
+    .saunatext1 {
+        font-size: 0.8rem;
+        width: 40%;
+        margin-left: 2rem;
+        margin-top: 0rem;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .saunatext2 {
+        font-size: 0.8rem;
+        width: 40%;
+        margin-right: 2rem;
+        margin-top: 1rem;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    .saunatyypit {
+        font-size: 2.5rem;
+    }
+    .saunaheading {
+        font-size: 1.2rem;
+    }
+
+    .saunatext1 {
+        font-size: 1rem;
+        width: 35%;
+        margin-left: 3rem;
+        margin-top: 0rem;
+    }
+
+    .saunatext2 {
+        font-size: 1rem;
+        width: 35%;
+        margin-right: 3rem;
+        margin-top: 4rem;
+    }
+}
+
+/* Hinnasto-sivu tyylit */
+
+.hinnasto {
+    min-height: 100vh;
+    background-size: cover;
+    position: relative;
+    border: 1rem solid black;
+}
+
+.hinnasto-content {
+    margin-top: 0;
     text-align: center;
 }
-footer.nb-footer .about p {
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-    padding-bottom: 2.5rem;
+
+.hinnasto-title {
+    font-size: 4rem;
+    color: whitesmoke;
+    padding: 2rem;
 }
-footer.nb-footer .about .social-media {
-    margin-top: 15px;
+
+.hinnat {
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.45);
+    line-height: 1.7;
+    justify-content: center;
+    width: 100%;
 }
-footer.nb-footer .about .social-media ul li a {
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    border-radius: 50%;
-    font-size: 16px;
-    color: #a17864;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+
+.hinnat2 {
+    margin-top: 5rem;
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.45);
+    line-height: 1.7;
+    justify-content: center;
+    width: 100%;
 }
-footer.nb-footer .about .social-media ul li a:hover {
-    background: #a17864;
+
+.tablehinnat {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.hinnatmain {
+    vertical-align: middle;
+    font-size: 2rem;
+}
+
+.varausbtn {
+    margin-top: 2rem;
+    padding: 2rem;
+    font-size: 2rem;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.45);
+    color: whitesmoke;
+    border-radius: 10px;
+}
+.varausbtn:hover {
+    background-color: whitesmoke;
+    color: #000000;
+    font-size: 2.2rem;
+    box-shadow: 5px 5px 5px #ffffffdb;
+}
+
+@media only screen and (max-width: 425px) {
+    .hinnasto-title {
+        font-size: 1.8rem;
+        color: whitesmoke;
+        padding: 1rem;
+    }
+
+    .hinnat {
+        color: whitesmoke;
+        background-color: rgba(0, 0, 0, 0.45);
+        line-height: 1.1;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hinnat2 {
+        margin-top: 5rem;
+        color: whitesmoke;
+        background-color: rgba(0, 0, 0, 0.45);
+        line-height: 1.1;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .tablehinnat {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .hinnatmain {
+        vertical-align: middle;
+        font-size: 1.1rem;
+    }
+
+    .varausbtn {
+        margin-top: 2rem;
+        padding: 1.2rem;
+        font-size: 1.2rem;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.45);
+        color: whitesmoke;
+        border-radius: 10px;
+    }
+    .varausbtn:hover {
+        background-color: whitesmoke;
+        color: #000000;
+        font-size: 1.4rem;
+        box-shadow: 5px 5px 5px #ffffffdb;
+    }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    .hinnasto-title {
+        font-size: 2.5rem;
+        color: whitesmoke;
+        padding: 2rem;
+    }
+
+    .hinnat,
+    .hinnat2 {
+        line-height: 1.4;
+    }
+
+    .tablehinnat {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .hinnatmain {
+        font-size: 1.4rem;
+    }
+
+    .varausbtn {
+        margin-top: 2rem;
+        padding: 1.5rem;
+        font-size: 1.4rem;
+    }
+    .varausbtn:hover {
+        background-color: whitesmoke;
+        color: #000000;
+        font-size: 1.6rem;
+        box-shadow: 5px 5px 5px #ffffffdb;
+    }
+}
+
+/* Carousel and text styles */
+
+.carousel_text {
+    height: 100vh;
+    align-items: center;
+    background-color: #000000;
+    display: flex;
+}
+
+.carousel-item {
+    border: #000000 solid 1rem;
+    height: 90vh;
+}
+.citytitle {
+    font-size: 3.5rem;
+    font-weight: 500;
+    justify-self: center;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 40%;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
     color: #fff;
-    border-color: #a17864;
-}
-footer.nb-footer .footer-info-single {
-    margin-top: 30px;
-}
-footer.nb-footer .footer-info-single .title {
-    color: #aaa;
-    text-transform: uppercase;
-    font-size: 16px;
-    border-left: 4px solid #a17864;
-    padding-left: 5px;
-}
-footer.nb-footer .footer-info-single ul li a {
-    display: block;
-    color: #aaa;
-    padding: 2px 0;
-}
-footer.nb-footer .footer-info-single ul li a:hover {
-    color: #a17864;
-}
-footer.nb-footer .footer-info-single p {
-    font-size: 13px;
-    line-height: 20px;
-    color: #aaa;
-}
-footer.nb-footer .copyright {
-    margin-top: 15px;
-    background: #111;
-    padding: 7px 0;
-    color: #999;
-}
-footer.nb-footer .copyright p {
-    margin: 0;
-    padding: 0;
+    text-align: center;
+    background: linear-gradient(rgba(56, 66, 96, 0.56), #aaaaaa80);
 }
 
-li {
-    color: #aaa;
+.aboutsauna {
+    margin: 1rem;
+    width: 20%;
 }
 
-ol,
-ul {
-    padding-left: 0rem;
+.textaboutsauna {
+    background-color: rgba(255, 255, 255, 0.56);
+    color: #fff;
+    border-radius: 10px;
+    padding: 0.2rem;
+    text-align: center;
+    font-size: 1.2rem;
 }
 
+@media only screen and (max-width: 425px) {
+    .carousel_text {
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .aboutsauna {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .textaboutsauna {
+        background-color: rgba(255, 255, 255, 0.56);
+        color: #fff;
+        border-radius: 10px;
+        padding: 0.2rem;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+    .carousel-item {
+        height: 45vh;
+    }
+
+    .carousel-indicators {
+        display: none;
+    }
+
+    .carousel-caption {
+        right: 0;
+        bottom: 40%;
+        left: 0;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+    .citytitle {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    .carousel_text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutsauna {
+        width: 100%;
+    }
+
+    .textaboutsauna {
+        font-size: 1.3rem;
+    }
+
+    .carousel-item {
+        height: 75vh;
+    }
+}
