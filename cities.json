@@ -1,0 +1,20 @@
+{
+    "helsinki": {
+        "bgurl": "./images-kaupungit/helsinki.jpeg"
+    },
+    "tampere": {
+        "bgurl": "./images-kaupungit/tampere.jpeg"
+    },
+    "turku": {
+        "bgurl": "./images-kaupungit/turku.jpeg"
+    },
+    "rovaniemi": {
+        "bgurl": "./images-kaupungit/rovaniemi.jpeg"
+    },
+    "oulu": {
+        "bgurl": "./images-kaupungit/oulu.jpeg"
+    },
+    "maarianhamina": {
+        "bgurl": "./images-kaupungit/maarianhamina.jpeg"
+    }
+}
