@@ -1,325 +1,497 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <nav></nav>
     <header class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <div class="heading-box">
-                <span class="display-1" id="text-1">Tervetuloa!</span>
-                <span class="display-1" id="text-2">Parhaat saunat,</span>
-                <span class="display-1" id="text-3">Meidän saunat.</span>
-            </div>
-            <div class="button-row">
-                <div class="text-box">
-                    <p class="h4">Suomen parhaat ja siistimmät saunat.</p>
-                    <p class="h4">
-                        Kaikki tämä meiltä, vain napin painalluksella!
-                    </p>
-                </div>
-                <button class="btn btn-light col-md-4 col-sm-12">
-                    Varaa sauna tästä!
-                </button>
-            </div>
+      <div class="container">
+        <div class="heading-box">
+          <span class="display-1" id="text-1">Tervetuloa!</span>
+          <span class="display-1" id="text-2">Parhaat saunat,</span>
+          <span class="display-1" id="text-3">Meidän saunat.</span>
         </div>
+        <div class="button-row">
+          <div class="text-box">
+            <p class="h4">Suomen parhaat ja siistimmät saunat.</p>
+            <p class="h4">Kaikki tämä meiltä, vain napin painalluksella!</p>
+          </div>
+          <button
+            class="btn btn-light col-md-4 col-sm-12"
+            data-bs-toggle="modal"
+            data-bs-target="#bookSauna"
+          >
+            Varaa sauna tästä!
+          </button>
+        </div>
+      </div>
     </header>
     <main>
-        <!-- Saunatyypit ja hinnasto with parallax -->
-        <article class="saunatyypit">
-            <section class="layers">
-                <section class="layer layers__header" style="background-image: url(parallax/base-layer.png)">
-                    Saunat
-                </section>
-                <section class="layer layers__caption1" style="background-image: url(parallax/layer-middle.png)">
-                    <article class="saunatext1">
-                        <h2 class="saunaheading">Savusauna</h2>
-                        <p>
-                            Savusaunan juuret ovat Suomessa syvällä. Jo
-                            Kalevalassa savusauna kuvattiin ihmisen
-                            voimanlähteeksi ja parannuskeinoksi. Aidon
-                            savusaunan hämärä valo, tuoksut, hiljaisuus ja
-                            seuraavan aamun jälkilämpö ovat taianomaisia.
-                        </p>
-                        <ul>
-                            <li>Sauna / max.12 henkilöä</li>
-                            <li>Kokous- ja ruokatilaa / 30 henkilöä</li>
-                        </ul>
-                    </article>
-                </section>
-
-                <section class="layer layers__caption2" style="background-image: url(parallax/Фон.png)">
-                    <article class="saunatext2">
-                        <h2 class="saunaheading">Höyrysauna</h2>
-                        <p>
-                            Höyrysaunassa ei ole kiuasta vaan lämpö tulee
-                            höyryhanan kautta joka puhaltaa saunaan lähes
-                            kiehumislämpötilassa olevaa höyryä. Höyrysaunan
-                            lämpö on yleensä vain 40-50°C, ilmankosteus on
-                            kuitenkin 100% tai jopa yli. Höyrysaunassa
-                            ollaan koko ajan lämpimässä sumupilvessä.
-                        </p>
-                        <ul>
-                            <li>Sauna / max.15 henkilöä</li>
-                            <li>Kokous- ja ruokatilaa / 30 henkilöä</li>
-                        </ul>
-                    </article>
-                </section>
-            </section>
-        </article>
-        <!-- Hinnasto - sivu -->
-        <article class="hinnasto" style="background-image: url(parallax/inside.jpeg)">
-            <section class="hinnasto-content">
-                <h2 class="hinnasto-title">Hinnasto</h2>
-                <table class="hinnat">
-                    <tr class="tablehinnat">
-                        <th class="hinnatmain" rowspan="4">Kertalippu</th>
-                        <th class="tablehinnat">Aikuinen</th>
-                        <th class="tablehinnat">8 euroa</th>
-                    </tr>
-                    <tr class="tablehinnat">
-                        <td class="tablehinnat">
-                            Opiskelija // eläkeläinen
-                        </td>
-                        <td class="tablehinnat">6 euroa</td>
-                    </tr>
-                    <tr class="tablehinnat">
-                        <td class="tablehinnat">Lapset</td>
-                        <td class="tablehinnat">5 euroa</td>
-                    </tr>
-                </table>
-                <table class="hinnat2">
-                    <tr class="tablehinnat">
-                        <th class="hinnatmain" rowspan="4">
-                            Ryhmätilaisuus
-                        </th>
-                        <th class="tablehinnat">
-                            Pieni ryhmä(max. 5 hlö.)
-                        </th>
-                        <th class="tablehinnat">350 euroa</th>
-                    </tr>
-                    <tr class="tablehinnat">
-                        <td class="tablehinnat">
-                            Keksikokoinen ryhmä(max. 15 hlö.)
-                        </td>
-                        <td class="tablehinnat">900 euroa</td>
-                    </tr>
-                    <tr class="tablehinnat">
-                        <td class="tablehinnat">Iso ryhmä(max. 30 hlö.)</td>
-                        <td class="tablehinnat">1200 euroa</td>
-                    </tr>
-                </table>
-                <button class="varausbtn">Varaa sauna tästä</button>
-            </section>
-        </article>
-
-        <!-- Cities carousel -->
-        <section class=" carousel_text">
-            <article class="aboutsauna">
-                <p class="textaboutsauna">
-                    Yleisiä saunoja on erilaisiin tarpeisiin ja
-                    tasovaatimuksiin. Saunoja löytyy urbaanista
-                    ympäristöstä, hotelleista, matkailunähtävyyksien
-                    läheltä. Nyt saunan kehitys on muuttanut suuntaa.
-                    Päätavoitteena ei ole enää peseytyminen, vaan elämysten
-                    saaminen ja yhteisöllisyys. <br />
-                    Sauno ja nauti maailman parhaasta suomalaisesta
-                    saunasta!
-                </p>
+      <!-- Saunatyypit ja hinnasto with parallax -->
+      <article class="saunatyypit">
+        <section class="layers">
+          <section
+            class="layer layers__header"
+            style="background-image: url(parallax/base-layer.png)"
+          >
+            Saunat
+          </section>
+          <section
+            class="layer layers__caption1"
+            style="background-image: url(parallax/layer-middle.png)"
+          >
+            <article class="saunatext1">
+              <h2 class="saunaheading">Savusauna</h2>
+              <p>
+                Savusaunan juuret ovat Suomessa syvällä. Jo Kalevalassa
+                savusauna kuvattiin ihmisen voimanlähteeksi ja parannuskeinoksi.
+                Aidon savusaunan hämärä valo, tuoksut, hiljaisuus ja seuraavan
+                aamun jälkilämpö ovat taianomaisia.
+              </p>
+              <ul>
+                <li>Sauna / max.12 henkilöä</li>
+                <li>Kokous- ja ruokatilaa / 30 henkilöä</li>
+              </ul>
             </article>
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
-                        aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
-                        aria-label="Slide 5"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
-                        aria-label="Slide 6"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./images-kaupungit/helsinki.jpeg" class="d-block w-100" alt="helsinki maisema" />
-                        <div class="carousel-caption d-md-block align-middle">
-                            <h5 class="citytitle">Helsinki</h5>
-                            <button class="varausbtn" onclick="selectCity('helsinki')">
-                                Varaa sauna heti
-                            </button>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./images-kaupungit/tampere.jpeg" class="d-block w-100" alt="tampere maisema" />
-                        <div class="carousel-caption d-md-block">
-                            <h5 class="citytitle">Tampere</h5>
-                            <button class="varausbtn" onclick="selectCity('tampere')">
-                                Varaa sauna heti
-                            </button>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./images-kaupungit/turku.jpeg" class="d-block w-100" alt="turku maisema" />
-                        <div class="carousel-caption d-md-block">
-                            <h5 class="citytitle">Turku</h5>
-                            <button class="varausbtn" onclick="selectCity('turku')">
-                                Varaa sauna heti
-                            </button>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./images-kaupungit/rovaniemi.jpeg" class="d-block w-100" alt="rovaniemi maisema" />
-                        <div class="carousel-caption d-md-block">
-                            <h5 class="citytitle">Rovaniemi</h5>
-                            <button class="varausbtn" onclick="selectCity('rovaniemi')">
-                                Varaa sauna heti
-                            </button>
-                        </div>
-                    </div>
-                    <div class=" carousel-item">
-                        <img src="./images-kaupungit/oulu.jpeg" class="d-block w-100" alt="oulu maisema" />
-                        <div class="carousel-caption d-md-block">
-                            <h5 class="citytitle">Oulu</h5>
-                            <button class="varausbtn" onclick="selectCity('oulu')">
-                                Varaa sauna heti
-                            </button>
-                        </div>
-                    </div>
-                    <div class=" carousel-item">
-                        <img src="./images-kaupungit/maarianhamina.jpeg" class="d-block w-100"
-                            alt="Maarianhamina maisema" />
-                        <div class="carousel-caption d-md-block">
-                            <h5 class="citytitle">Maarianhamina</h5>
-                            <button class="varausbtn" onclick="selectCity('maarianhamina')">
-                                Varaa sauna heti
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <button class=" carousel-control-prev h-100" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
+          </section>
+
+          <section
+            class="layer layers__caption2"
+            style="background-image: url(parallax/Фон.png)"
+          >
+            <article class="saunatext2">
+              <h2 class="saunaheading">Höyrysauna</h2>
+              <p>
+                Höyrysaunassa ei ole kiuasta vaan lämpö tulee höyryhanan kautta
+                joka puhaltaa saunaan lähes kiehumislämpötilassa olevaa höyryä.
+                Höyrysaunan lämpö on yleensä vain 40-50°C, ilmankosteus on
+                kuitenkin 100% tai jopa yli. Höyrysaunassa ollaan koko ajan
+                lämpimässä sumupilvessä.
+              </p>
+              <ul>
+                <li>Sauna / max.15 henkilöä</li>
+                <li>Kokous- ja ruokatilaa / 30 henkilöä</li>
+              </ul>
+            </article>
+          </section>
         </section>
+      </article>
+      <!-- Hinnasto - sivu -->
+      <article
+        class="hinnasto"
+        style="background-image: url(parallax/inside.jpeg)"
+      >
+        <section class="hinnasto-content">
+          <h2 class="hinnasto-title">Hinnasto</h2>
+          <table class="hinnat">
+            <tr class="tablehinnat">
+              <th class="hinnatmain" rowspan="4">Kertalippu</th>
+              <th class="tablehinnat">Aikuinen</th>
+              <th class="tablehinnat">8 euroa</th>
+            </tr>
+            <tr class="tablehinnat">
+              <td class="tablehinnat">Opiskelija // eläkeläinen</td>
+              <td class="tablehinnat">6 euroa</td>
+            </tr>
+            <tr class="tablehinnat">
+              <td class="tablehinnat">Lapset</td>
+              <td class="tablehinnat">5 euroa</td>
+            </tr>
+          </table>
+          <table class="hinnat2">
+            <tr class="tablehinnat">
+              <th class="hinnatmain" rowspan="4">Ryhmätilaisuus</th>
+              <th class="tablehinnat">Pieni ryhmä(max. 5 hlö.)</th>
+              <th class="tablehinnat">350 euroa</th>
+            </tr>
+            <tr class="tablehinnat">
+              <td class="tablehinnat">Keksikokoinen ryhmä(max. 15 hlö.)</td>
+              <td class="tablehinnat">900 euroa</td>
+            </tr>
+            <tr class="tablehinnat">
+              <td class="tablehinnat">Iso ryhmä(max. 30 hlö.)</td>
+              <td class="tablehinnat">1200 euroa</td>
+            </tr>
+          </table>
+          <button
+            class="varausbtn"
+            data-bs-toggle="modal"
+            data-bs-target="#bookSauna"
+          >
+            Varaa sauna tästä
+          </button>
+        </section>
+      </article>
+
+      <!-- Modal window to book a sauna -->
+      <div
+        class="modal fade"
+        id="bookSauna"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-
+        labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">
+                Varaa sauna meiltä
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="modal-body">
+            <div class="input-group mb-3">
+                <span class="input-group-text">Nimi ja sukunimi</span>
+                <input type="text" aria-label="Nimi" class="form-control">
+                <input type="text" aria-label="Sukunimi" class="form-control">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Puhelinnumero</span>
+                    <input type="tel" class="form-control" id="exampleInputPhone1" aria-describedby="phoneHelp">
+                  </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Sähköposti</span>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Ihmisten määrä</span>
+                    <input type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+                  </div>
+
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="inputGroupSelect01">Saunatyyppi</label>
+                    <select class="form-select" id="inputGroupSelect01">
+                        <option selected>Valitse...</option>
+                        <option value="1">Savusauna</option>
+                        <option value="2">Höyrysauna</option>
+                    </select>
+                    </div>
+                <div class="input-group mb-3">
+                <label class="input-group-text" for="inputGroupSelect01">Kaupunki</label>
+                <select class="form-select" id="inputGroupSelect01">
+                    <option selected>Valitse...</option>
+                    <option value="1">Helsinki</option>
+                    <option value="2">Tampere</option>
+                    <option value="3">Turku</option>
+                    <option value="4">Maarianhamina</option>
+                    <option value="5">Oulu</option>
+                    <option value="6">Rovaniemi</option>
+                </select>
+                </div>
+
+
+                <section class="container">
+                    <label for="saunatime">Valitse päivä ja aika:</label>
+                    <input type="datetime-local" id="saunatime" name="saunatime">
+                </section>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Takaisin
+              </button>
+              <button type="button" class="btn btn-success">Varaa</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cities carousel -->
+      <section class="carousel_text">
+        <article class="aboutsauna">
+          <p class="textaboutsauna">
+            Yleisiä saunoja on erilaisiin tarpeisiin ja tasovaatimuksiin.
+            Saunoja löytyy urbaanista ympäristöstä, hotelleista,
+            matkailunähtävyyksien läheltä. Nyt saunan kehitys on muuttanut
+            suuntaa. Päätavoitteena ei ole enää peseytyminen, vaan elämysten
+            saaminen ja yhteisöllisyys. <br />
+            Sauno ja nauti maailman parhaasta suomalaisesta saunasta!
+          </p>
+        </article>
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide"
+          data-bs-ride="false"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="5"
+              aria-label="Slide 6"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./images-kaupungit/helsinki.jpeg"
+                class="d-block w-100"
+                alt="helsinki maisema"
+              />
+              <div class="carousel-caption d-md-block align-middle">
+                <h5 class="citytitle">Helsinki</h5>
+                <button class="varausbtn" onclick="selectCity('helsinki')">
+                  Varaa sauna heti
+                </button>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images-kaupungit/tampere.jpeg"
+                class="d-block w-100"
+                alt="tampere maisema"
+              />
+              <div class="carousel-caption d-md-block">
+                <h5 class="citytitle">Tampere</h5>
+                <button class="varausbtn" onclick="selectCity('tampere')">
+                  Varaa sauna heti
+                </button>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images-kaupungit/turku.jpeg"
+                class="d-block w-100"
+                alt="turku maisema"
+              />
+              <div class="carousel-caption d-md-block">
+                <h5 class="citytitle">Turku</h5>
+                <button class="varausbtn" onclick="selectCity('turku')">
+                  Varaa sauna heti
+                </button>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images-kaupungit/rovaniemi.jpeg"
+                class="d-block w-100"
+                alt="rovaniemi maisema"
+              />
+              <div class="carousel-caption d-md-block">
+                <h5 class="citytitle">Rovaniemi</h5>
+                <button class="varausbtn" onclick="selectCity('rovaniemi')">
+                  Varaa sauna heti
+                </button>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images-kaupungit/oulu.jpeg"
+                class="d-block w-100"
+                alt="oulu maisema"
+              />
+              <div class="carousel-caption d-md-block">
+                <h5 class="citytitle">Oulu</h5>
+                <button class="varausbtn" onclick="selectCity('oulu')">
+                  Varaa sauna heti
+                </button>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./images-kaupungit/maarianhamina.jpeg"
+                class="d-block w-100"
+                alt="Maarianhamina maisema"
+              />
+              <div class="carousel-caption d-md-block">
+                <h5 class="citytitle">Maarianhamina</h5>
+                <button class="varausbtn" onclick="selectCity('maarianhamina')">
+                  Varaa sauna heti
+                </button>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev h-100"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
     </main>
     <footer class="nb-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="about">
-                        <img src="images/logo.png" class="img-responsive center-block" alt="" />
-                        <p>
-                            "Jos sauna, viina ja terva ei auta, niin tauti
-                            on kuolemaksi"
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="footer-info-single">
-                        <h2 class="title">TIEDUSTELUT</h2>
-                        <ul class="list-unstyled">
-                            <li>sauna@hotmail.com</li>
-                            <li>+358 43362811</li>
-                            <li>Mäntyniementie 4, 00250 Helsinki</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="footer-info-single">
-                        <h2 class="title">KAUPUNGIT</h2>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#" title=""><i class="fa fa-angle-double-right"></i>
-                                    Helsinki</a>
-                            </li>
-                            <li>
-                                <a href="#" title=""><i class="fa fa-angle-double-right"></i>
-                                    Espoo</a>
-                            </li>
-                            <li>
-                                <a href="#" title=""><i class="fa fa-angle-double-right"></i>
-                                    Vantaa</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="footer-info-single">
-                        <h2 class="title">Omistajille</h2>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#" title=""><i class="fa fa-angle-double-right"></i>
-                                    Ilmoita
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" title=""><i class="fa fa-angle-double-right"></i>
-                                    Päivitä tietoja</a>
-                            </li>
-                            <li>
-                                <a href="#" title=""><i class="fa fa-angle-double-right"></i>
-                                    Mainosta</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <div class="footer-info-single">
-                        <h2 class="title">AUKIOLOAJAT</h2>
-                        <ul>
-                            <li>ma-pe klo 10-20</li>
-                            <li>pe klo 10-18</li>
-                            <li>su klo 11-16</li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="about">
+              <img
+                src="images/logo.png"
+                class="img-responsive center-block"
+                alt=""
+              />
+              <p>
+                "Jos sauna, viina ja terva ei auta, niin tauti on kuolemaksi"
+              </p>
             </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="footer-info-single">
+              <h2 class="title">TIEDUSTELUT</h2>
+              <ul class="list-unstyled">
+                <li>sauna@hotmail.com</li>
+                <li>+358 43362811</li>
+                <li>Mäntyniementie 4, 00250 Helsinki</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="footer-info-single">
+              <h2 class="title">KAUPUNGIT</h2>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" title=""
+                    ><i class="fa fa-angle-double-right"></i> Helsinki</a
+                  >
+                </li>
+                <li>
+                  <a href="#" title=""
+                    ><i class="fa fa-angle-double-right"></i> Espoo</a
+                  >
+                </li>
+                <li>
+                  <a href="#" title=""
+                    ><i class="fa fa-angle-double-right"></i> Vantaa</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="footer-info-single">
+              <h2 class="title">Omistajille</h2>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" title=""
+                    ><i class="fa fa-angle-double-right"></i>
+                    Ilmoita
+                  </a>
+                </li>
+                <li>
+                  <a href="#" title=""
+                    ><i class="fa fa-angle-double-right"></i> Päivitä tietoja</a
+                  >
+                </li>
+                <li>
+                  <a href="#" title=""
+                    ><i class="fa fa-angle-double-right"></i> Mainosta</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <div class="footer-info-single">
+              <h2 class="title">AUKIOLOAJAT</h2>
+              <ul>
+                <li>ma-pe klo 10-20</li>
+                <li>pe klo 10-18</li>
+                <li>su klo 11-16</li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <section class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <p>Copyright © 2022. Your Company.</p>
-                    </div>
-                    <div class="col-sm-6"></div>
-                </div>
+      <section class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <p>Copyright © 2022. Your Company.</p>
             </div>
-        </section>
+            <div class="col-sm-6"></div>
+          </div>
+        </div>
+      </section>
     </footer>
     <script src="./js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</body>
-
+  </body>
 </html>
