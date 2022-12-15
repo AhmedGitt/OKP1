@@ -6,6 +6,9 @@ function selectCity(city) {
 	window.location.href = redirect.href;
 }
 
+// Modal input
+const MODAL_CITY = document.getElementById('inputGroupSelect01');
+
 // Utility thingy to translate city names to correct modal selection ids
 const modalCityIdMap = new Map();
 modalCityIdMap.set('helsinki', 1);
@@ -14,6 +17,15 @@ modalCityIdMap.set('turku', 3);
 modalCityIdMap.set('maarianhamina', 4);
 modalCityIdMap.set('oulu', 5);
 modalCityIdMap.set('rovaniemi', 6);
+
+// Same utility map but in reverse for looking up cityname from city selection id
+const reverseModalCityIdMap = new Map();
+reverseModalCityIdMap.set(1, 'helsinki');
+reverseModalCityIdMap.set(2, 'tampere');
+reverseModalCityIdMap.set(3, 'turku');
+reverseModalCityIdMap.set(4, 'maarianhamina');
+reverseModalCityIdMap.set(5, 'oulu');
+reverseModalCityIdMap.set(6, 'rovaniemi');
 
 // Get city id from selection page url,
 // If id doesn't exist redirect to homepage
@@ -33,8 +45,9 @@ async function loadCity() {
 	const ELEMENT_HEADERTEXT = document.getElementById('header-text');
 	ELEMENT_HEADER.style.backgroundImage = `url(${data[city].bgurl})`;
 	ELEMENT_HEADERTEXT.innerHTML = city;
+
 	// Set modal city selection to correct city
-	const MODAL_CITY = document.getElementById('inputGroupSelect01');
+	if (!MODAL_CITY) return;
 	MODAL_CITY.value = modalCityIdMap.get(city);
 
 	// Fetch sauna data
@@ -88,4 +101,8 @@ async function loadCity() {
 	if (saunas.length == 0) {
 		ELEMENT_SAUNAS.innerHTML = 'Alueeltasi ei löytynyt saunoja :(';
 	}
+}
+
+function makeReservation() {
+	window.location.href = `${window.location.origin}/thankyou.html?city=${reverseModalCityIdMap.get(parseInt(MODAL_CITY.value))}`;
 }
