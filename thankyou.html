@@ -25,75 +25,10 @@
 		</div>
 	</header>
 	<main class="container my-5">
-		<a href="./index.html" class="link-secondary text-decoration-none pb-4 d-block">&#8592 Takaisin</a>
-		<h2>Saunamme</h2>
-		<section id="saunat"></section>
+		<a href="./index.html" class="link-secondary text-decoration-none pb-4 d-block">&#8592 Takaisin etusivulle</a>
+		<h2>Kiitos tilauksesta :)</h2>
+		<p>Olemme varanneet sinulle saunan ja lähettäneet sähköpostiisi tilausvahvistuksen.</p>
 	</main>
-
-	<!-- Modal window to book a sauna -->
-	<div class="modal fade" id="bookSauna" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-
-		labelledby="staticBackdropLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="staticBackdropLabel">
-						Varaa tämä sauna
-					</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-
-				<div class="modal-body">
-					<div class="input-group mb-3">
-						<span class="input-group-text">Nimi ja sukunimi</span>
-						<input type="text" aria-label="Nimi" class="form-control" />
-						<input type="text" aria-label="Sukunimi" class="form-control" />
-					</div>
-
-					<div class="input-group mb-3">
-						<span class="input-group-text" id="inputGroup-sizing-default">Puhelinnumero</span>
-						<input type="tel" class="form-control" id="exampleInputPhone1" aria-describedby="phoneHelp" />
-					</div>
-
-					<div class="input-group mb-3">
-						<span class="input-group-text" id="inputGroup-sizing-default">Sähköposti</span>
-						<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-					</div>
-
-					<div class="input-group mb-3">
-						<span class="input-group-text" id="inputGroup-sizing-default">Ihmisten määrä</span>
-						<input type="number" class="form-control" aria-label="Sizing example input"
-							aria-describedby="inputGroup-sizing-default" />
-					</div>
-
-					<div class="input-group mb-3">
-						<label class="input-group-text" for="inputGroupSelect01">Kaupunki</label>
-						<select disabled class="form-select reservation-modal" id="inputGroupSelect01">
-							<option selected>Valitse...</option>
-							<option value="1">Helsinki</option>
-							<option value="2">Tampere</option>
-							<option value="3">Turku</option>
-							<option value="4">Maarianhamina</option>
-							<option value="5">Oulu</option>
-							<option value="6">Rovaniemi</option>
-						</select>
-					</div>
-
-					<section class="container">
-						<label for="saunatime">Valitse päivä ja aika:</label>
-						<input type="datetime-local" id="saunatime" name="saunatime" />
-					</section>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-						Takaisin
-					</button>
-					<button type="button" class="btn btn-success" onclick="makeReservation()">
-						Varaa
-					</button>
-				</div>
-			</div>
-		</div>
-	</div>
 
 	<footer class="nb-footer">
 		<div class="container">
