@@ -7,7 +7,8 @@ function selectCity(city) {
 }
 
 // Modal input
-const MODAL_CITY = document.getElementById('inputGroupSelect01');
+// const MODAL_CITY = document.getElementById('inputGroupSelect01');
+const MODAL_CITY = document.getElementsByClassName('reservation-modal')[0];
 
 // Utility thingy to translate city names to correct modal selection ids
 const modalCityIdMap = new Map();
@@ -106,3 +107,5 @@ async function loadCity() {
 function makeReservation() {
 	window.location.href = `${window.location.origin}/thankyou.html?city=${reverseModalCityIdMap.get(parseInt(MODAL_CITY.value))}`;
 }
+
+console.log(MODAL_CITY);
